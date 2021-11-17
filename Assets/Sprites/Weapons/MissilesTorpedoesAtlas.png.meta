@@ -1,12 +1,18 @@
 fileFormatVersion: 2
-guid: 76ae66d8633c3ad40bb908b654d63da1
+guid: da841e0ed6399bd4695ebcfa661935f8
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: 2DSpaceshipsFreeTrialAtlasTopViewRed_0
-    21300002: 2DSpaceshipsFreeTrialAtlasTopViewRed_1
-    21300004: 2DSpaceshipsFreeTrialAtlasTopViewRed_2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: 2DShipsMissilesTorpedoesAtlas_0
+  - first:
+      213: 21300002
+    second: 2DShipsMissilesTorpedoesAtlas_1
+  - first:
+      213: 21300004
+    second: 2DShipsMissilesTorpedoesAtlas_2
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -61,9 +67,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -72,9 +78,10 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -83,17 +90,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_0
+      name: 2DShipsMissilesTorpedoesAtlas_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 446
-        width: 756
-        height: 1567
+        x: 74
+        y: 8
+        width: 101
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +109,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d36eee3a32c414fb2a22627d84ad97
+      spriteID: be3ac134cca8e6240877b7d07c85c42c
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_1
+      name: 2DShipsMissilesTorpedoesAtlas_1
       rect:
         serializedVersion: 2
-        x: 842
-        y: 813
-        width: 657
-        height: 1134
+        x: 234
+        y: 85
+        width: 73
+        height: 343
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34ed1d29246751140a173d2de7e76fd6
+      spriteID: 18169a724db02c246bfb216119845911
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_2
+      name: 2DShipsMissilesTorpedoesAtlas_2
       rect:
         serializedVersion: 2
-        x: 1110
-        y: 40
-        width: 914
-        height: 730
+        x: 384
+        y: 158
+        width: 37
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db5b38b87c9f6354f96de1bfdf9b8ec7
+      spriteID: b0366c8c499fd184691b60ded60eb7fb
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -149,11 +160,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e9f578cb8cbadd84dad63cb8af0d24e0
+    spriteID: 67d1400b8aaecb449af5bec0fc9a8793
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

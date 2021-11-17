@@ -1,12 +1,18 @@
 fileFormatVersion: 2
-guid: c91ca482c2d65c04bbd61802e93740bc
+guid: 76ae66d8633c3ad40bb908b654d63da1
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: 2DSpaceshipsFreeTrialAtlasTopViewBlack_0
-    21300002: 2DSpaceshipsFreeTrialAtlasTopViewBlack_1
-    21300004: 2DSpaceshipsFreeTrialAtlasTopViewBlack_2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: 2DSpaceshipsFreeTrialAtlasTopViewRed_0
+  - first:
+      213: 21300002
+    second: 2DSpaceshipsFreeTrialAtlasTopViewRed_1
+  - first:
+      213: 21300004
+    second: 2DSpaceshipsFreeTrialAtlasTopViewRed_2
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -61,7 +67,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -72,7 +78,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,11 +90,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_0
+      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_0
       rect:
         serializedVersion: 2
         x: 29
@@ -101,13 +109,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40bb7431c680bd042a73ffa83ce2c8ab
+      spriteID: 68d36eee3a32c414fb2a22627d84ad97
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_1
+      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_1
       rect:
         serializedVersion: 2
         x: 842
@@ -121,13 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7b87247839c12446867d4d1135a035c
+      spriteID: 34ed1d29246751140a173d2de7e76fd6
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_2
+      name: 2DSpaceshipsFreeTrialAtlasTopViewRed_2
       rect:
         serializedVersion: 2
         x: 1110
@@ -141,7 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89bcf733a74a3714c917550da226daf7
+      spriteID: db5b38b87c9f6354f96de1bfdf9b8ec7
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -149,11 +160,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6b469b2315a2c954c8088ca4cca9efae
+    spriteID: e9f578cb8cbadd84dad63cb8af0d24e0
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,15 +1,18 @@
 fileFormatVersion: 2
-guid: 23a10fa0df1140746adb7bda3d420aba
+guid: c91ca482c2d65c04bbd61802e93740bc
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ScifiFighterWeaponsAtlas_0
-    21300002: ScifiFighterWeaponsAtlas_1
-    21300004: ScifiFighterWeaponsAtlas_2
-    21300006: ScifiFighterWeaponsAtlas_3
-    21300008: ScifiFighterWeaponsAtlas_4
-    21300010: ScifiFighterWeaponsAtlas_5
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: 2DSpaceshipsFreeTrialAtlasTopViewBlack_0
+  - first:
+      213: 21300002
+    second: 2DSpaceshipsFreeTrialAtlasTopViewBlack_1
+  - first:
+      213: 21300004
+    second: 2DSpaceshipsFreeTrialAtlasTopViewBlack_2
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -64,9 +67,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -75,9 +78,10 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -86,17 +90,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_0
+      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_0
       rect:
         serializedVersion: 2
         x: 29
-        y: 55
-        width: 82
-        height: 362
+        y: 446
+        width: 756
+        height: 1567
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,19 +109,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b229ff1d01307a4f80dc0b81189a01b
+      spriteID: 40bb7431c680bd042a73ffa83ce2c8ab
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_1
+      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 56
-        width: 72
-        height: 388
+        x: 842
+        y: 813
+        width: 657
+        height: 1134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c69a81e9b7de6844b05edb7d9287961
+      spriteID: c7b87247839c12446867d4d1135a035c
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_2
+      name: 2DSpaceshipsFreeTrialAtlasTopViewBlack_2
       rect:
         serializedVersion: 2
-        x: 243
-        y: 52
-        width: 84
-        height: 297
+        x: 1110
+        y: 40
+        width: 914
+        height: 730
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,67 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b447fa9ffc8ae874cbb51d617a97d0f0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_3
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 224
-        width: 27
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eba4395c954d2a34483d571537e5b15a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_4
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 224
-        width: 76
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e7b0da3de0777447b8a7da4cb5146bc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ScifiFighterWeaponsAtlas_5
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 64
-        width: 126
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba58062507a323c4ea51a59271756554
+      spriteID: 89bcf733a74a3714c917550da226daf7
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -212,11 +160,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e0eb1ad98499c964ea0c84ca9582d5ea
+    spriteID: 6b469b2315a2c954c8088ca4cca9efae
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
