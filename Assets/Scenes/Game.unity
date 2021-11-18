@@ -254,7 +254,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 6
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parameters: {fileID: 598472798}
   _moveSpeed: 100
-  _turnSpeed: 0.1
+  _turnSpeed: 0.05
 --- !u!1001 &2438894429125178310
 PrefabInstance:
   m_ObjectHideFlags: 0
