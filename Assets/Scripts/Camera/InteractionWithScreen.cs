@@ -11,19 +11,18 @@ namespace Camera
         private UnityEngine.Camera _camera;
         private Vector3 _positionLeftBtn;
 
-        private void Start()
+        public void Start()
         {
             _camera = GetComponent<UnityEngine.Camera>();
         }
 
-        private void Update()
+        public void ChangeMousePosition()
         {
-            if (Input.GetMouseButton(0) == false) return;
-            _positionLeftBtn = GetCorrectPositionMouse(Input.mousePosition);
+            _positionLeftBtn = GetCorrectMousePosition(Input.mousePosition);
             _playerEngine.Move(_positionLeftBtn);
         }
 
-        private Vector3 GetCorrectPositionMouse(Vector3 position)
+        private Vector3 GetCorrectMousePosition(Vector3 position)
         {
             float x = position.x;
             float y = position.y;

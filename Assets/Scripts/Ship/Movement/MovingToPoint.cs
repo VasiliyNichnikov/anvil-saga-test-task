@@ -22,7 +22,7 @@ namespace Ship.Movement
             get => _constantMoveSpeed;
             set
             {
-                if (value >= 1 && value <= 100)
+                if (value >= 1 && value <= 300)
                     _constantMoveSpeed = value;
             }
         }
