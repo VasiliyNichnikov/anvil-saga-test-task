@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Ship.Shooting.Ammunition
@@ -15,9 +16,20 @@ namespace Ship.Shooting.Ammunition
             throw new Exception("The class does not implement this method");
         }
 
-        public override void FlightForward(Vector3 shootDirectory)
+        public override void FlightForward(Vector3 shootDirection)
         {
-            ThisTransform.position += shootDirectory * Speed * Time.deltaTime;
+            StartCoroutine(AnimationMovement(shootDirection));
         }
+        
+        private IEnumerator AnimationMovement(Vector3 shootDirection)
+        {
+            while (BeingOnScreen.ObjectInside(ThisTransform.position))
+            {
+                ThisTransform.position += shootDirection * Speed * Time.deltaTime;
+                yield return null;
+            }
+            Destruction();
+        }
+        
     }
 }

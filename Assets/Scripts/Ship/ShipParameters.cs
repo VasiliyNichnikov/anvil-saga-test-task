@@ -7,9 +7,10 @@ namespace Ship
     {
         private SpriteRenderer _renderer;
         private Vector3 _extents;
-
-        public Vector3 Extents => _extents;
         
+        public Vector3 Extents => _extents;
+
+
         private void Start()
         {
             _renderer = GetComponent<SpriteRenderer>();
