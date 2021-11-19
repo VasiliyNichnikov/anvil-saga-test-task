@@ -14,7 +14,7 @@ namespace Ship.Shooting.Ammunition
             
         }
 
-        public override void FlightUp(Vector3 positionEnd)
+        public override void FlightForward(Vector3 shootDirectory)
         {
             
         }

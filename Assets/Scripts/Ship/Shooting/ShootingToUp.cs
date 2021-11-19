@@ -6,6 +6,7 @@ namespace Ship.Shooting
     public class ShootingToUp : MonoBehaviour
     {
         [SerializeField] private CreatingAmmunition _creatingAmmunition;
+        [SerializeField] private BeingOnScreen _beingOnScreen;
         [SerializeField] private GameObject _rocketPrefab;
 
         [SerializeField] private Transform _firingPoint;
@@ -14,24 +15,20 @@ namespace Ship.Shooting
 
         public void Shot()
         {
-            Vector3 positionEnd = _firingPoint.position;
-            var rocket = _creatingAmmunition.Get(_departurePoint, _rocketPrefab);
-            rocket.FlightUp(positionEnd);
-            // StartCoroutine(AnimationMovementRocket());
+            StartCoroutine(AnimationMovementRocket());
         }
 
         private IEnumerator AnimationMovementRocket()
         {
-            Vector3 positionEnd = _firingPoint.position;
+            Vector3 shootDirectory = _firingPoint.position - _departurePoint.position;
             var rocket = _creatingAmmunition.Get(_departurePoint, _rocketPrefab);
-            float distance = Vector3.Distance(positionEnd, rocket.transform.position);
             
-            while (distance > 0.1f)
+            while (_beingOnScreen.ObjectInside(rocket.transform.position))
             {
-                rocket.FlightUp(positionEnd);
+                rocket.FlightForward(shootDirectory);
                 yield return null;
-                distance = Vector3.Distance(positionEnd, rocket.transform.position);
             }
+            rocket.Destruction();
         }
         
     }

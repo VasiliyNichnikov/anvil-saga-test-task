@@ -8,8 +8,8 @@ namespace Player
     public class PlayerEngine : MonoBehaviour
     {
         [SerializeField] private ShipParameters _parameters;
-        [SerializeField][Range(1, 300)] private float _moveSpeed;
-        [SerializeField][Range(0.001f, 0.2f)] private float _turnSpeed;
+        [SerializeField] [Range(1, 300)] private float _moveSpeed;
+        [SerializeField] [Range(0.001f, 0.2f)] private float _turnSpeed;
 
         private MovingToPoint _engine;
         private Transform _thisTransform;
@@ -21,11 +21,11 @@ namespace Player
             _engine.ConstantTurnSpeed = _turnSpeed;
             _thisTransform = transform;
         }
-        
+
         public void Move(Vector3 pointOfMovement)
         {
             _engine.CalculationToPoint(pointOfMovement);
-            if(_engine.TargetDistance - _parameters.Extents.y >= 0)
+            if (_engine.TargetDistance - _parameters.Extents.y >= 0)
                 _engine.Move();
         }
 
@@ -34,12 +34,13 @@ namespace Player
             if (_engine == null || _thisTransform == null) return;
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(new Vector3(_engine.TargetPosition.x, _engine.TargetPosition.y, 0), 0.2f);
-                
+
             Gizmos.color = Color.black;
             Gizmos.DrawSphere(new Vector3(_thisTransform.position.x, _thisTransform.position.y, 0), 0.2f);
-            
+
             Gizmos.color = Color.blue;
-            Gizmos.DrawLine(new Vector3(_engine.TargetPosition.x, _engine.TargetPosition.y, 0), new Vector3(_thisTransform.position.x, _thisTransform.position.y, 0));
+            Gizmos.DrawLine(new Vector3(_engine.TargetPosition.x, _engine.TargetPosition.y, 0),
+                new Vector3(_thisTransform.position.x, _thisTransform.position.y, 0));
         }
     }
 }
