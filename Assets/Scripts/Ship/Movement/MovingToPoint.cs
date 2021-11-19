@@ -7,7 +7,7 @@ namespace Ship.Movement
     {
         private Vector3 _targetPosition;
         private float _targetDistance;
-    
+
         private float _constantMoveSpeed;
         private float _constantTurnSpeed;
 
@@ -16,7 +16,7 @@ namespace Ship.Movement
 
         public Vector3 TargetPosition => _targetPosition;
         public float TargetDistance => _targetDistance;
-        
+
         public float ConstantMoveSpeed
         {
             get => _constantMoveSpeed;
@@ -36,30 +36,32 @@ namespace Ship.Movement
                     _constantTurnSpeed = value;
             }
         }
-        
+
         public void Start()
         {
             _rb2d = GetComponent<Rigidbody2D>();
             _thisTransform = transform;
         }
-        
+
         public void CalculationToPoint(Vector3 pointOfMovement)
         {
             _targetPosition = pointOfMovement;
             _targetDistance = Vector3.Distance(_thisTransform.position, pointOfMovement);
         }
-        
+
         public void Move()
         {
             float turnSpeed = _constantTurnSpeed * _targetDistance;
             float moveSpeed = _constantMoveSpeed * _targetDistance;
-            
+
             _rb2d.AddForce(_thisTransform.up * moveSpeed * Time.deltaTime);
-            Quaternion newRotation = Quaternion.LookRotation(_thisTransform.position - _targetPosition, Vector3.forward);
+            Quaternion newRotation =
+                Quaternion.LookRotation(_thisTransform.position - _targetPosition, Vector3.forward);
             newRotation.x = 0.0f;
             newRotation.y = 0.0f;
-        
-            _thisTransform.rotation = Quaternion.Slerp(_thisTransform.rotation, newRotation, Time.deltaTime * turnSpeed);
+
+            _thisTransform.rotation =
+                Quaternion.Slerp(_thisTransform.rotation, newRotation, Time.deltaTime * turnSpeed);
         }
     }
 }

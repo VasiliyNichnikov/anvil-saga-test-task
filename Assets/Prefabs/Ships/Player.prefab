@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 375765015083218118}
   - component: {fileID: 375765015083218116}
   - component: {fileID: 375765015083218119}
-  - component: {fileID: 375765015083218113}
+  - component: {fileID: 6129640283487825003}
   - component: {fileID: 375765015083218112}
   m_Layer: 0
   m_Name: Player
@@ -447,7 +447,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &375765015083218119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7ba55d08d55d94e8ecc1b3c18a0d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &375765015083218113
+--- !u!114 &6129640283487825003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,10 +469,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 375765015083218117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8111683b8f614959a01efd3f1d7d04f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a233c9e76abf4843832d9e6688e3a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _parameters: {fileID: 375765014531962307}
+  _creationTrace: {fileID: 375765014466546029}
+  _determinant: {fileID: 0}
   _moveSpeed: 100
   _turnSpeed: 0.15
 --- !u!114 &375765015083218112
@@ -488,11 +490,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creatingAmmunition: {fileID: 0}
-  _beingOnScreen: {fileID: 0}
   _rocketPrefab: {fileID: 7973208960753581163, guid: f3ea2e206e306a84384550ddec54eb37,
     type: 3}
-  _firingPoint: {fileID: 375765014540445580}
-  _departurePoint: {fileID: 375765014578060856}
+  _ship: {fileID: 7451595900813528650}
+  _sides:
+  - _name: Up
+    _firingPoint: {fileID: 375765014540445580}
+    _departurePoint: {fileID: 375765014578060856}
 --- !u!1 &375765015677880948
 GameObject:
   m_ObjectHideFlags: 0

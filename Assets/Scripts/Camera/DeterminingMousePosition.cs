@@ -1,28 +1,18 @@
-﻿using Player;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
-    public class InteractionWithScreen : MonoBehaviour
+    public class DeterminingMousePosition : MonoBehaviour
     {
-        [SerializeField] private PlayerEngine _playerEngine;
-
         private UnityEngine.Camera _camera;
-        private Vector3 _positionLeftBtn;
 
         public void Start()
         {
             _camera = GetComponent<UnityEngine.Camera>();
         }
 
-        public void ChangeMousePosition()
-        {
-            _positionLeftBtn = GetCorrectMousePosition(Input.mousePosition);
-            _playerEngine.Move(_positionLeftBtn);
-        }
-
-        private Vector3 GetCorrectMousePosition(Vector3 position)
+        public Vector3 GetCorrectMousePosition(Vector3 position)
         {
             float x = position.x;
             float y = position.y;

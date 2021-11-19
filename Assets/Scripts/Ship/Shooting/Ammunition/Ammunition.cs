@@ -16,8 +16,7 @@ namespace Ship.Shooting.Ammunition
             BeingOnScreen = FindObjectOfType<BeingOnScreen>();
         }
 
-        public abstract void FlightLeft(Vector3 positionEnd);
-        public abstract void FlightRight(Vector3 positionEnd);
+        public abstract void FlightHorizontal(Vector3 shootDirection);
         public abstract void FlightForward(Vector3 shootDirection);
 
         public void SetParent(ShipParent ship)

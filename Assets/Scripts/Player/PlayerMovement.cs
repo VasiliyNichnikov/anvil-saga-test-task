@@ -1,13 +1,17 @@
-﻿using Ship;
+﻿using Camera;
+using Ship;
 using Ship.Movement;
 using UnityEngine;
 
 namespace Player
 {
     [RequireComponent(typeof(MovingToPoint))]
-    public class PlayerEngine : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private ShipParameters _parameters;
+        [SerializeField] private CreationTrace _creationTrace;
+        [SerializeField] private DeterminingMousePosition _determinant;
+
         [SerializeField] [Range(1, 300)] private float _moveSpeed;
         [SerializeField] [Range(0.001f, 0.2f)] private float _turnSpeed;
 
@@ -22,9 +26,24 @@ namespace Player
             _thisTransform = transform;
         }
 
-        public void Move(Vector3 pointOfMovement)
+        public void Moving()
         {
-            _engine.CalculationToPoint(pointOfMovement);
+            if (Input.GetMouseButton(0))
+            {
+                MovingToNewPosition();
+                _creationTrace.ChangeState(true);
+            }
+            else
+            {
+                _creationTrace.ChangeState(false);
+            }
+        }
+
+        private void MovingToNewPosition()
+        {
+            Vector3 newPosition = _determinant.GetCorrectMousePosition(Input.mousePosition);
+
+            _engine.CalculationToPoint(newPosition);
             if (_engine.TargetDistance - _parameters.Extents.y >= 0)
                 _engine.Move();
         }
