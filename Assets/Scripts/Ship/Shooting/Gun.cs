@@ -18,7 +18,6 @@ namespace Ship.Shooting
 
         public void Shooting(int index)
         {
-            if (!Input.GetMouseButtonDown(1)) return;
             CheckingOutOfArrayLimits(index);
             Shot(index);
         }

@@ -351,7 +351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375765014540445581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 375765014405836877}
@@ -398,8 +398,9 @@ GameObject:
   m_Component:
   - component: {fileID: 375765015083218118}
   - component: {fileID: 375765015083218116}
-  - component: {fileID: 375765015083218119}
   - component: {fileID: 6129640283487825003}
+  - component: {fileID: 2362054474131158106}
+  - component: {fileID: 375765015083218119}
   - component: {fileID: 375765015083218112}
   m_Layer: 0
   m_Name: Player
@@ -448,18 +449,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &375765015083218119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375765015083218117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7ba55d08d55d94e8ecc1b3c18a0d05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6129640283487825003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +466,30 @@ MonoBehaviour:
   _determinant: {fileID: 0}
   _moveSpeed: 100
   _turnSpeed: 0.15
+--- !u!114 &2362054474131158106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375765015083218117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfb37c456cf073428a97462a0a6b946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &375765015083218119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375765015083218117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7ba55d08d55d94e8ecc1b3c18a0d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &375765015083218112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89db709951ba6e418669260bacc2307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _creatingAmmunition: {fileID: 0}
   _rocketPrefab: {fileID: 7973208960753581163, guid: f3ea2e206e306a84384550ddec54eb37,
     type: 3}
   _ship: {fileID: 7451595900813528650}
