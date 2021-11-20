@@ -5,9 +5,9 @@ namespace Player
 {
     public class RocketUpdateTimer : MonoBehaviour
     {
-        private float _secondsFloat;
+        [SerializeField] private float _timeSave = 5;
 
-        private float _timeSave = 5;
+        private float _secondsFloat;
         private float _timeRemaining;
 
         public float SecondsFloat => _secondsFloat;
