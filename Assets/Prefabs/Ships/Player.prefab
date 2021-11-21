@@ -466,6 +466,13 @@ MonoBehaviour:
   _determinant: {fileID: 0}
   _moveSpeed: 100
   _turnSpeed: 0.15
+  _pointsToCapture:
+  - {x: -4, y: 0, z: 0}
+  - {x: -3, y: 0, z: 0}
+  - {x: -2, y: 0, z: 0}
+  - {x: 4, y: 0, z: 0}
+  - {x: 3, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
 --- !u!114 &2362054474131158106
 MonoBehaviour:
   m_ObjectHideFlags: 0

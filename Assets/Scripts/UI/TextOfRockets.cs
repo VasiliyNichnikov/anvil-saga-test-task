@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Texts
+namespace UI
 {
     [RequireComponent(typeof(Text))]
     public class TextOfRockets : MonoBehaviour

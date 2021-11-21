@@ -1,4 +1,5 @@
 ﻿using Camera;
+using Events;
 using Ship;
 using Ship.Movement;
 using UnityEngine;
@@ -15,12 +16,16 @@ namespace Player
         [SerializeField] [Range(1, 300)] private float _moveSpeed;
         [SerializeField] [Range(0.001f, 0.2f)] private float _turnSpeed;
 
+        [SerializeField] private Vector3[] _pointsToCapture;
+        
         private Vector3 _movementPosition;
         private MovingToPoint _engine;
         private Transform _thisTransform;
 
-        public Vector3 Direction => (_movementPosition - _thisTransform.position).normalized;
+        // public Vector3 Distance => Vector3.Distance();
         public Vector3 MovementPosition => _movementPosition;
+
+        public Vector3[] PointsToCapture => _pointsToCapture;
 
         public void Start()
         {
@@ -36,6 +41,7 @@ namespace Player
             {
                 MovingToNewPosition();
                 _creationTrace.ChangeState(true);
+                EventsMouse.OnChangeMousePosition();
             }
             else
             {

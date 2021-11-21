@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Ship.Movement
 {
@@ -49,17 +50,18 @@ namespace Ship.Movement
             _targetDistance = Vector3.Distance(_thisTransform.position, pointOfMovement);
         }
 
-        public void Move()
+        public void Move(bool useConstMoveSpeed=false)
         {
             float turnSpeed = _constantTurnSpeed * _targetDistance;
             float moveSpeed = _constantMoveSpeed * _targetDistance;
-
+            if(useConstMoveSpeed)
+                moveSpeed = _constantMoveSpeed * 10;
+            
             _rb2d.AddForce(_thisTransform.up * moveSpeed * Time.deltaTime);
             Quaternion newRotation =
                 Quaternion.LookRotation(_thisTransform.position - _targetPosition, Vector3.forward);
             newRotation.x = 0.0f;
             newRotation.y = 0.0f;
-
             _thisTransform.rotation =
                 Quaternion.Slerp(_thisTransform.rotation, newRotation, Time.deltaTime * turnSpeed);
         }
