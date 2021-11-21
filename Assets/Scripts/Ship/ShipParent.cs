@@ -5,7 +5,7 @@ public abstract class ShipParent : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Ammunition ammunition = other.GetComponent<Ammunition>();
+        Rocket ammunition = other.GetComponent<Rocket>();
         if (ammunition != null)
         {
             ammunition.GettingIntoSomeoneElseShip(this);

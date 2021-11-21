@@ -16,22 +16,18 @@ namespace Player
         [SerializeField] [Range(1, 300)] private float _moveSpeed;
         [SerializeField] [Range(0.001f, 0.2f)] private float _turnSpeed;
 
-        [SerializeField] private Vector3[] _pointsToCapture;
-        
         private Vector3 _movementPosition;
         private MovingToPoint _engine;
         private Transform _thisTransform;
 
-        // public Vector3 Distance => Vector3.Distance();
+        public float TimeToPoint => Vector3.Distance(_movementPosition, _thisTransform.position);
+
         public Vector3 MovementPosition => _movementPosition;
 
-        public Vector3[] PointsToCapture => _pointsToCapture;
 
         public void Start()
         {
             _engine = GetComponent<MovingToPoint>();
-            _engine.ConstantMoveSpeed = _moveSpeed;
-            _engine.ConstantTurnSpeed = _turnSpeed;
             _thisTransform = transform;
         }
 
@@ -53,7 +49,7 @@ namespace Player
         {
             _movementPosition = _determinant.GetCorrectMousePosition(Input.mousePosition);
 
-            _engine.CalculationToPoint(_movementPosition);
+            _engine.CalculationToPoint(_movementPosition, _moveSpeed, _turnSpeed);
             if (_engine.TargetDistance - _parameters.Extents.y >= 0)
                 _engine.Move();
         }

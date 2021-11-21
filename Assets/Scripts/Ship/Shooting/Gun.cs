@@ -35,7 +35,7 @@ namespace Ship.Shooting
             Vector3 shootDirection = _sides[index].FiringPoint.position - _sides[index].DeparturePoint.position;
             var rocket = _creatingAmmunition.Get(_sides[index].DeparturePoint, _rocketPrefab);
             rocket.SetParent(_ship);
-            rocket.FlightForward(shootDirection);
+            rocket.FlightDirection(shootDirection);
         }
     }
 }

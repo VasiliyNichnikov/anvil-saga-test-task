@@ -4,27 +4,51 @@ using UnityEngine;
 
 namespace Ship.Shooting.Ammunition
 {
-    public class Rocket : Ammunition
+    public class Rocket : MonoBehaviour
     {
-        public override void FlightHorizontal(Vector3 shootDirection)
+        public float Speed;
+        private Transform _thisTransform;
+        private BeingOnScreen _beingOnScreen;
+        private ShipParent _ship;
+
+        public void Awake()
         {
-            throw new Exception("The class does not implement this method");
+            _thisTransform = transform;
+            _beingOnScreen = FindObjectOfType<BeingOnScreen>();
         }
-        
-        public override void FlightForward(Vector3 shootDirection)
+
+        public void FlightDirection(Vector3 shootDirection)
         {
             StartCoroutine(AnimationMovement(shootDirection));
         }
-        
+
+        public void SetParent(ShipParent ship)
+        {
+            _ship = ship;
+        }
+
         private IEnumerator AnimationMovement(Vector3 shootDirection)
         {
-            while (BeingOnScreen.ObjectInside(ThisTransform.position))
+            while (_beingOnScreen.ObjectInside(_thisTransform.position))
             {
-                ThisTransform.position += shootDirection * Speed * Time.deltaTime;
+                _thisTransform.position += shootDirection * Speed * Time.deltaTime;
                 yield return null;
             }
+
             Destruction();
         }
-        
+
+        public void GettingIntoSomeoneElseShip(ShipParent other)
+        {
+            if (_ship != other)
+            {
+                Destruction();
+            }
+        }
+
+        private void Destruction()
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
