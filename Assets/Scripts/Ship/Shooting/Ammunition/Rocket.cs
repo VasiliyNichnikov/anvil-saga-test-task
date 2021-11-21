@@ -38,7 +38,12 @@ namespace Ship.Shooting.Ammunition
             Destruction();
         }
 
-        public void GettingIntoSomeoneElseShip(ShipParent other)
+        public bool CheckingWhereProjectileCameFrom(ShipParent other)
+        {
+            return _ship != other;
+        }
+
+        public void CheckRemoveDestruction(ShipParent other)
         {
             if (_ship != other)
             {

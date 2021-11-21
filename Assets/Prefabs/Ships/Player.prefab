@@ -401,6 +401,8 @@ GameObject:
   - component: {fileID: 6129640283487825003}
   - component: {fileID: 2362054474131158106}
   - component: {fileID: 375765015083218112}
+  - component: {fileID: 5695639875261645270}
+  - component: {fileID: 7553741974372890682}
   m_Layer: 0
   m_Name: Player
   m_TagString: Ship
@@ -465,13 +467,6 @@ MonoBehaviour:
   _determinant: {fileID: 0}
   _moveSpeed: 100
   _turnSpeed: 0.15
-  _pointsToCapture:
-  - {x: -4, y: 0, z: 0}
-  - {x: -3, y: 0, z: 0}
-  - {x: -2, y: 0, z: 0}
-  - {x: 4, y: 0, z: 0}
-  - {x: 3, y: 0, z: 0}
-  - {x: 2, y: 0, z: 0}
 --- !u!114 &2362054474131158106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +498,37 @@ MonoBehaviour:
   - _name: Up
     _firingPoint: {fileID: 375765014540445580}
     _departurePoint: {fileID: 375765014578060856}
+--- !u!114 &5695639875261645270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375765015083218117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733bdd20d9765fd44994135d83354de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _points:
+  - {x: -4, y: 0, z: 0}
+  - {x: -3, y: 0, z: 0}
+  - {x: -2, y: 0, z: 0}
+  - {x: 4, y: 0, z: 0}
+  - {x: 3, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
+--- !u!114 &7553741974372890682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375765015083218117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7ba55d08d55d94e8ecc1b3c18a0d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &375765015677880948
 GameObject:
   m_ObjectHideFlags: 0

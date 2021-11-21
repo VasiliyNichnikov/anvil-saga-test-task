@@ -29,7 +29,7 @@ namespace Enemy
             EventsMouse.EventChangeMousePosition -= RecalculationOfPoints;
         }
 
-        private void Start()
+        private void Awake()
         {
             _thisTransform = transform;
             _engine = GetComponent<MovingToPoint>();
