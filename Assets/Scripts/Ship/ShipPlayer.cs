@@ -17,7 +17,7 @@ namespace Ship
             Rocket rocket = other.GetComponent<Rocket>();
             if (rocket != null)
             {
-                rocket.CheckRemoveDestruction(this);
+                rocket.CheckDestruction(this);
                 if(rocket.CheckingWhereProjectileCameFrom(this))
                     ActiveGameOverPanel();
             }

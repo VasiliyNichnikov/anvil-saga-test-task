@@ -43,7 +43,7 @@ namespace Ship.Shooting.Ammunition
             return _ship != other;
         }
 
-        public void CheckRemoveDestruction(ShipParent other)
+        public void CheckDestruction(ShipParent other)
         {
             if (_ship != other)
             {
